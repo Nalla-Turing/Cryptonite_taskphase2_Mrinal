@@ -3,10 +3,40 @@ This taskphase challenges focus the art of reverse engineering the source code o
 
 ## Challenge-1 GDB baby step 1
 
-`Flag`
+`Flag` `picoCTF{549698}`
 
 ### Steps to complete the challenge
+1:- Trying to find information about the file
+For that I used `file debugger0_a` to find all the necessary information about the file
 
+    debugger0_a: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=15a10290db2cd2ec0c123cf80b88ed7d7f5cf9ff, for GNU/Linux 3.2.0, not stripped
+
+2:- Trying to learn about what is written here??
+A lot of stuff I didn't fullyn understand but this `not-stripped` sounds important cause Chat Gpt
+
+3:- What is Non Stripped?
+It means our binary file retains information aout symbols that point to function, variables and sometimes debugging symbols.
+
+4:- `gdb ./debugger0_a` to find more information
+`no debugging symbols found` so it may contain function and variable symbols
+
+5:- Using hint 2 i try ot find functions in gdb file using `info functions`
+
+6: I see the main function
+
+7:- disassemble main fucntion using `disassemble main`
+
+8:- ''' Dump of assembler code for function main:
+   0x0000555555555129 <+0>:     endbr64
+   0x000055555555512d <+4>:     push   %rbp
+   0x000055555555512e <+5>:     mov    %rsp,%rbp
+=> 0x0000555555555131 <+8>:     mov    %edi,-0x4(%rbp)
+   0x0000555555555134 <+11>:    mov    %rsi,-0x10(%rbp)
+   0x0000555555555138 <+15>:    mov    $0x86342,%eax
+   0x000055555555513d <+20>:    pop    %rbp
+   0x000055555555513e <+21>:    ret '''
+
+9:- `0x86342` ius getting into eax register which is `549698` in decimal
 
 ### Things i learned while working on this challenge
 First I would just like to add in the basic of reverse engineering I learned before attempting the challenge.
