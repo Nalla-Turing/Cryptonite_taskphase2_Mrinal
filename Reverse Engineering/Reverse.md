@@ -65,3 +65,13 @@ For that CPU needs to turn into the kernel mode, which has all the required acce
 
 User mode sends a reuqest or a system call to the kernel mode to check if the request is valid and if the prcess can be done. IF the reuqirements are fulfilled, then the kernel mode will complete your process and give the desired output to the user space.
 
+## Mistakes Made along the way???
+1:- I tried to add break at main function and run the file to see what happens
+
+2:- Tried to run the main function and check every step one by one using `step` command
+
+3:- Wasted a lot of time to install ida free to disassemble this file
+
+<br><br>
+
+## Challenge-2 
