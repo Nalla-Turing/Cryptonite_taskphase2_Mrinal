@@ -13,3 +13,7 @@ This writeup is to save the progress report of Cryptography challenges.
 <br>
 
 ### Things Learned
+
+#### What is sys library in python
+
+#### What is fileinput and what does it do
