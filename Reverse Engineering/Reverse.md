@@ -74,4 +74,71 @@ User mode sends a reuqest or a system call to the kernel mode to check if the re
 
 <br><br>
 
-## Challenge-2 
+## Challenge-2 ARMssembly 1
+
+`FLAG` `picoCTF{0000004D}`
+
+### Steps Involved
+1 I downloaded the file and saw it was a an ARMassembly `.s` file
+
+2:-Went into youtube to learn a bit about ARM Assembly
+
+3:- Saw that func is the starting point and it is doing some basic arithmatic operation, bitwise shift and storing. Which in the end gives `w0` the value of `w1` (which is 77 here) subtratcted by `value at sp+12`
+
+4:- Now in the main function It again doing similar stuff with creating backward decreement stack with stack pointer back wounded by 48
+
+5:- Then the main thing that branched to `.L0` label which is our win condition is that `w0` from `func` should be equal to 0.
+
+6:- That means `w0` at `sp+12` must be equal to 77
+
+7:- Converted 77 into hex to get `0x4D` this gives us the flag
+<br>
+
+### Things I learned along the way
+
+#### What is ARM Assembly and basics of it
+So ARM jsut like x86 is another type of assembly architecture that is written in text format with `.S` extension
+
+In basic ARM assembly architecture we have multiple kind of registers
+`r0`to `r6`
+Which contains the first few arguments for our assembly code
+
+`r7` Which contains the code for our system calls
+
+`pc` counter which contains the address to the next step that will happen
+
+#### What are directives? .global? .text? .align?
+Directives are like additiona information about our assembly code which range from where our program should start  to what will be the format of our program etc
+
+`.global` this directive make sure our intial point is available to other assembly files and not just the current ones
+
+"It's like making your function available throughout all files"
+
+`.text` this driective Specifies the start of a code section, where you write the actual instructions.
+
+This section typically contains the program’s executable code.
+
+`.align` Aligns data or code on specific memory boundaries, often to improve access speed.
+
+#### WHat are sp and w0 registers??
+`sp` is the stack pointer register which points to the top of a stack and is used to make space for more itema to be put in a stack
+
+In ARM64 type the geenral purpose registers are from x0 to x30
+Each of whom can contain 64 bits information
+In `x0` register the lower part of 32 bits is contained in `w0` register
+So `w0` is like the subpart of the bigger `x0` register
+
+#### new commands that in learned
+`str` stores value from `<base register>` into `[address]`
+
+`ldr` loads value into `<base register>` from `[address]`
+
+`ldl` bitwise shifts value in `<base register>` by value in `<address register>`
+
+`sub sp,sp, #32` basically creates a 32 bit stack space for us to work in
+we need to close this also at the end by doing `add sp,sp, 32`
+
+`stp	x29, x30, [sp, -48]!` creates a backward decreement stack of 48
+Then stores `x29` at `sp - 48` and `x30` at `sp - 40`
+Then write-back the pointer to `x29`
+So our sp starts at `original sp -48` 
