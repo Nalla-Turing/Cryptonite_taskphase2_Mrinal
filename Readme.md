@@ -12,8 +12,8 @@ An index of the challenegs available in this taskphase
 | 7         | SOAP                         | haven't started |
 | 8         | Forbidden Paths              | haven't started |
 | 9         | cookies                      | haven't started |
-| 10        | C3                           | doing |
-| 11        | Custom encryption            | haven't started |
+| 10        | C3                           | done |
+| 11        | Custom encryption            | doing |
 | 12        | miniRSA                      | haven't started |
 | 13        | buffer overflow 0            | haven't started |
 | 14        | format string 0              | haven't started |
