@@ -6,7 +6,7 @@ An index of the challenegs available in this taskphase
 | 1         | GDB baby step 1              | done |
 | 2         | ARMsssembly 1                | done |
 | 3         | Vault door 3                 | haven't started |
-| 4         | trivial flag transfer protocol | haven't started |
+| 4         | trivial flag transfer protocol | done |
 | 5         | tunn3l v1s10n                | haven't started |
 | 6         | m00nwalk                     | haven't started |
 | 7         | SOAP                         | haven't started |
