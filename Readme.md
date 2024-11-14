@@ -10,7 +10,7 @@ An index of the challenegs available in this taskphase
 | 5         | tunn3l v1s10n                | haven't started |
 | 6         | m00nwalk                     | haven't started |
 | 7         | SOAP                         | haven't started |
-| 8         | Forbidden Paths              | haven't started |
+| 8         | Forbidden Paths              | done |
 | 9         | cookies                      | haven't started |
 | 10        | C3                           | done |
 | 11        | Custom encryption            | doing |
