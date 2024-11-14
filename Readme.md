@@ -9,7 +9,7 @@ An index of the challenegs available in this taskphase
 | 4         | trivial flag transfer protocol | done |
 | 5         | tunn3l v1s10n                | haven't started |
 | 6         | m00nwalk                     | haven't started |
-| 7         | SOAP                         | haven't started |
+| 7         | SOAP                         | done |
 | 8         | Forbidden Paths              | done |
 | 9         | cookies                      | haven't started |
 | 10        | C3                           | done |
