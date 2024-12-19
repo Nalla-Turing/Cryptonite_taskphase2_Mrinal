@@ -54,6 +54,25 @@ As i am observing the main function of the format-string-0.c file. I come acoss 
         } else {
             printf("%s\n%s\n","Patrick is still hungry!","Try to serve him something of larger size!");
     fflush(stdout);
+
+here, we have see a menu containing 3 options, then our condition statement check if our input is in the menu or not. Then if the input is 2*BUFFSIZE(32) it turns to bob function
+
+Now the `Gr%114d_Cheese` option will be have 0 preceeded by 114 empty spaces thus this will lead to else condition
+
+Now coming to bob fucntion we have something similar
+
+    char *menu2[3] = {"Pe%to_Portobello", "$outhwest_Burger", "Cla%sic_Che%s%steak"};
+    if (!on_menu(choice2, menu2, 3)) {
+        printf("%s", "There is no such burger yet!\n");
+        fflush(stdout);
+    } else {
+        printf(choice2);
+        fflush(stdout);
+    }
+
+NOw if you use the `Cla%sic_Che%s%steak` will lead to segmentation fault. Thus leading to output of flag
+
+Giving me the flag `picoCTF{7h3_cu570m3r_15_n3v3r_SEGFAULT_dc0f36c4}`
 <br>
 
 ### Things learned
