@@ -59,3 +59,9 @@ Now, what change it's extension to `.bmp` but the file is corrupted
 So I use hex editor and chatgpt to edit it's header and hid header data and viola the image is now visible
 
 ![tunnel1](./ch2/tunnel1.png)
+
+But the height of the image looks weird so I edit the height of the image in the hex data and I get the  flag
+
+![tunnel2](./ch2/tunnel2.png)
+
+`picoCTF{qu1t3_a_v13w_2020}`
