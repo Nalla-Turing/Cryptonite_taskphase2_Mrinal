@@ -58,4 +58,4 @@ Now, what change it's extension to `.bmp` but the file is corrupted
 
 So I use hex editor and chatgpt to edit it's header and hid header data and viola the image is now visible
 
-![tunnel1](https://github.com/Nalla-Turing/Cryptonite_taskphase2_Mrinal/tree/master/Forencics/ch2/tunnel1.png)
+![tunnel1](./ch2/tunnel1.png)
