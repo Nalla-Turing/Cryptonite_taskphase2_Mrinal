@@ -40,6 +40,7 @@ I had to learn everything in the code as i didn't what is going on
 
 ### Process
 As i am observing the main function of the format-string-0.c file. I come acoss this 
+    
     char choice1[BUFSIZE];
     scanf("%s", choice1);
     char *menu1[3] = {"Breakf@st_Burger", "Gr%114d_Cheese", "Bac0n_D3luxe"};
