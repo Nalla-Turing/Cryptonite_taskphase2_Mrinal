@@ -65,3 +65,16 @@ But the height of the image looks weird so I edit the height of the image in the
 ![tunnel2](./ch2/tunnel2.png)
 
 `picoCTF{qu1t3_a_v13w_2020}`
+<br>
+
+### Things I learned
+You can find out hidden height and width of a file using  hex data editing
+<br>
+
+### Mistakes made during the solution
+didn't that you have to edit out beyond the first 8 bits of hex data
+<br><br>
+
+## Challenge-3 m00nwalk
+We get a wap file which we can decode using sstv decoder like qsstv to get the flag
+`picoCTF{beep_boop_im_in_space}`
