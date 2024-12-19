@@ -17,4 +17,4 @@ An index of the challenegs available in this taskphase
 | 12        | miniRSA                      | haven't started |
 | 13        | buffer overflow 0            | done |
 | 14        | format string 0              | done |
-| 15        | flag leak                    | haven't started |
+| 15        | flag leak                    | done |
