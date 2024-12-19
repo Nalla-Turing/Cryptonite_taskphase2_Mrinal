@@ -15,6 +15,6 @@ An index of the challenegs available in this taskphase
 | 10        | C3                           | done |
 | 11        | Custom encryption            | doing |
 | 12        | miniRSA                      | haven't started |
-| 13        | buffer overflow 0            | haven't started |
-| 14        | format string 0              | haven't started |
+| 13        | buffer overflow 0            | done |
+| 14        | format string 0              | done |
 | 15        | flag leak                    | haven't started |
