@@ -5,10 +5,11 @@
 
 ### Process
 Looking at the code we see that 
+
     void vuln(char *input){
   char buf2[16];
   strcpy(buf2, input);
-}
+    }
 
 thus our buffer can only be 16 characters long at a time.
 
@@ -33,4 +34,31 @@ This is used to set the effective id as our id. We do this so that we can get ef
 
 ### Mistakes I made
 I had to learn everything in the code as i didn't what is going on
+<br><br>
+
+## Challenge-2 format string 0
+
+### Process
+As i am observing the main function of the format-string-0.c file. I come acoss this 
+    char choice1[BUFSIZE];
+    scanf("%s", choice1);
+    char *menu1[3] = {"Breakf@st_Burger", "Gr%114d_Cheese", "Bac0n_D3luxe"};
+    if (!on_menu(choice1, menu1, 3)) {
+        printf("%s", "There is no such burger yet!\n");
+        fflush(stdout);
+    } else {
+        int count = printf(choice1);
+        if (count > 2 * BUFSIZE) {
+            serve_bob();
+        } else {
+            printf("%s\n%s\n",
+                    "Patrick is still hungry!",
+                    "Try to serve him something of larger size!");
+            fflush(stdout);
+<br>
+
+### Things learned
+<br>
+
+### Mistakes I made
 <br>
