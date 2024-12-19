@@ -42,3 +42,20 @@
 ### Things I learned
 
 <br><br>
+
+### Challenge-2 tunn3l v1s10n
+We get an unidentified image
+ To find more about it i go to `filext.com` to find more about the image
+
+I see that it can be a bmp file. So i use
+
+    snorlux@MrinalPC:/mnt/f/Cryptonite_taskphase2_Mrinal/Forencics/ch2$ identify  tunn3l_v1s10n
+    tunn3l_v1s10n BMP 1134x306+0+0 DirectClass 8-bit 2.8Mi 0.000u 0m:0.000004s
+
+Thus confirming it's bmp file
+
+Now, what change it's extension to `.bmp` but the file is corrupted
+
+So I use hex editor and chatgpt to edit it's header and hid header data and viola the image is now visible
+
+![tunnel1]()
