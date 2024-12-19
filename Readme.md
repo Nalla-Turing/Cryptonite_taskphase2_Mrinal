@@ -7,11 +7,11 @@ An index of the challenegs available in this taskphase
 | 2         | ARMsssembly 1                | done |
 | 3         | Vault door 3                 | haven't started |
 | 4         | trivial flag transfer protocol | done |
-| 5         | tunn3l v1s10n                | haven't started |
-| 6         | m00nwalk                     | haven't started |
+| 5         | tunn3l v1s10n                | done |
+| 6         | m00nwalk                     | done |
 | 7         | SOAP                         | done |
 | 8         | Forbidden Paths              | done |
-| 9         | cookies                      | haven't started |
+| 9         | cookies                      | done |
 | 10        | C3                           | done |
 | 11        | Custom encryption            | doing |
 | 12        | miniRSA                      | haven't started |
