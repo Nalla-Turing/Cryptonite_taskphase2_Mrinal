@@ -44,17 +44,15 @@ As i am observing the main function of the format-string-0.c file. I come acoss 
     scanf("%s", choice1);
     char *menu1[3] = {"Breakf@st_Burger", "Gr%114d_Cheese", "Bac0n_D3luxe"};
     if (!on_menu(choice1, menu1, 3)) {
-        printf("%s", "There is no such burger yet!\n");
+        printf("%s", "There is no such burgeryet!\n");
         fflush(stdout);
     } else {
         int count = printf(choice1);
         if (count > 2 * BUFSIZE) {
             serve_bob();
         } else {
-            printf("%s\n%s\n",
-                    "Patrick is still hungry!",
-                    "Try to serve him something of larger size!");
-            fflush(stdout);
+            printf("%s\n%s\n","Patrick is still hungry!","Try to serve him something of larger size!");
+    fflush(stdout);
 <br>
 
 ### Things learned
