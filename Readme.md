@@ -11,7 +11,7 @@ An index of the challenegs available in this taskphase
 | 6         | m00nwalk                     | done |
 | 7         | SOAP                         | done |
 | 8         | Forbidden Paths              | done |
-| 9         | cookies                      | haven't started |
+| 9         | cookies                      | done |
 | 10        | C3                           | done |
 | 11        | Custom encryption            | doing |
 | 12        | miniRSA                      | haven't started |
