@@ -7,9 +7,9 @@
 Looking at the code we see that 
 
     void vuln(char *input){
-  char buf2[16];
-  strcpy(buf2, input);
-    }
+        char buf2[16];
+        strcpy(buf2, input);
+        }
 
 thus our buffer can only be 16 characters long at a time.
 
