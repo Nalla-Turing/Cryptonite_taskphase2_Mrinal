@@ -141,4 +141,22 @@ we need to close this also at the end by doing `add sp,sp, 32`
 `stp	x29, x30, [sp, -48]!` creates a backward decreement stack of 48
 Then stores `x29` at `sp - 48` and `x30` at `sp - 40`
 Then write-back the pointer to `x29`
-So our sp starts at `original sp -48` 
+So our sp starts at `original sp -48`
+
+## Challenge-3 Vault door 3
+
+### Process
+Ok first we need to identify what the programm is doing
+
+Well the code is taking in the password, extracting the password inside {} brackets
+
+ Then 
+ First 8 characters of password (password.charAt(i) where i is 0 to 7) are copied as-is.
+
+Characters from index 8 to 15 are taken in reverse order from the range 8 to 15 in the password.
+
+Characters from index 16 to 31 are constructed in a zigzag pattern.
+
+So i just need to reverse engineer the code as I did in `solution.py` and viola we have the flag
+
+`picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_79958f}`
