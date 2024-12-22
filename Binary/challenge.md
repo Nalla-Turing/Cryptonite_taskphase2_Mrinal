@@ -120,3 +120,15 @@ And get the flag `picoCTF{L34k1ng_Fl4g_0ff_St4ck_95f60617}`
 You can access the string at specific positional order in the file using `%i$s`
 
 You can write code in the wsl shell itself and pipe the output to a specifc file
+
+### Extra challenges
+### Format strings 1
+OK it is same as the flag leak but the trick of using the fucntion wasn't working
+So i manually put 100 `%x` to get the string in hex form
+then i wrote the code to remove the commas and decode everything as hex to ascii taken 2 at a time
+
+Thus in the mix of unidentifiable string I got
+`{FTCocip5_14m1n44x4_31y75b_g41f_}f89b7d`
+
+Converting this from little endian to normal text I get the flag
+`picoCTF{4n1m41_57y13_4x4_f14g_b5d7b98f}`
