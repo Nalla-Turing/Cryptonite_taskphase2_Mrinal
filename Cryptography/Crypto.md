@@ -3,20 +3,45 @@ This writeup is to save the progress report of Cryptography challenges.
 
 ## Challenge-1 C3
 
-### Flag
+process
+Looki at the ciphering file, i convert a deiphering code as follows
+
+    lookup1 = "\n \"#()*+/1:=[]abcdefghijklmnopqrstuvwxyz"
+    lookup2 = "ABCDEFGHIJKLMNOPQRSTabcdefghijklmnopqrst"
+
+    def find_cur(lhs, prev):
+	    return (lhs + prev) % 40
+
+
+    ciphertext = list("DLSeGAGDgBNJDQJDCFSFnRBIDjgHoDFCFtHDgJpiHtGDmMAQFnRBJKkBAsTMrsPSDDnEFCFtIbEDtDCIbFCFtHTJDKerFldbFObFCFtLBFkBAAAPFnRBJGEkerFlcPgKkImHnIlATJDKbTbFOkdNnsgbnJRMFnRBNAFkBAAAbrcbTKAkOgFpOgFpOpkBAAAAAAAiClFGIPFnRBaKliCgClFGtIBAAAAAAAOgGEkImHnIl")
+
+    decrypted =  ""
+    prev = 0
+
+    for char in ciphertext:
+	
+	    lookup2_index = lookup2.index(char)
+	    cur = find_cur(lookup2_index, prev)
+	    decrypted += lookup1[cur]
+	    prev = cur
+
+
+    print(decrypted)
+
+Now using this i got another piece of code
+it is a python2 script which takes itself as the input
+So i use wsl to input the file into the python file to get the flag
 `Flag` `picoCTF{adlibs}`
-
-<br>
-
-### Steps Involved
-
 <br>
 
 ### Things Learned
 
-#### What is sys library in python
+What is sys library in python
 
-#### What is fileinput and what does it do
+What is fileinput and what does it do
+
+What does input do in the fileinput module
+<br><br><br>
 
 ## Challenge-2 Custom encryption
 
@@ -65,7 +90,7 @@ Diffie-Hellman key exchange
 
 ### Problems I faced
 Took too much time on understanding the logic of the programs
-
+<br><br><br>
 
 ## Challenge-3 MiniRSA
 
