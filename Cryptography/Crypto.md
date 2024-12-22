@@ -109,3 +109,17 @@ or not using irootwhich also gives you the message
 
 ### what i learned
 RSA encryption method and it's variations
+
+
+## Extra challenges
+### Challenge Vignere
+
+Just had to use your standard vignere cipher and get the flag
+`picoCTF{D0NT_US3_V1G3N3R3_C1PH3R_ae82272q}`
+<br>
+
+### Challenge rotation
+Just put it in the normal rot decoder we get the flag from this
+
+![picture1](rotation.png)
+`picoCTF{r0tat1on_d3crypt3d_429af00f}`
