@@ -13,7 +13,7 @@ An index of the challenegs available in this taskphase
 | 8         | Forbidden Paths              | done |
 | 9         | cookies                      | done |
 | 10        | C3                           | done |
-| 11        | Custom encryption            | doing |
+| 11        | Custom encryption            | done |
 | 12        | miniRSA                      | done |
 | 13        | buffer overflow 0            | done |
 | 14        | format string 0              | done |
