@@ -30,3 +30,8 @@ We use an active low signal in place of an active high due to a variety of reaso
 
 2:- Since we generally use NMOS and NPN transistors, which have default state of High, we use active Low to bring down the state to an ON condition, which is generally easier to bring it up to an on condition using an active high. 
 As seen in some microcontroller, we prefer the reset condition to be of the active low state,making it much more reliable and more resistant to your accidental resets due unwanted signal noise.
+
+3:- Interrupt Signals
+For systems with interrupt handling, an interrupt pin might be set up as active LOW. 
+This means that if an external device needs to alert the controller, it pulls down the interrupt pin  to LOW, signaling that something needs attention.
+The default HIGH state ensures that the system runs normally, and the LOW signal only interrupts it when necessary.
