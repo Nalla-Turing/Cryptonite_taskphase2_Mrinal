@@ -21,4 +21,12 @@ Even if one manages to manufacture a precise 90 degree turn, the stress at the s
 
 
 ##### As mentioned before, we have managed to deal with most of these manufacturing and Functional problems due to advancement in our manufacturing and designing process. Keeping all these points in mind is still helpful.
+<br><br>
 
+## Why do we use active low when we have active high?
+We use an active low signal in place of an active high due to a variety of reasons-
+
+1:- Logic circuits can pick up electrical noise, and noise typically causes small positive voltage spikes.In an active low system, these spikes can be prevented from accidentally trigger a signal, because the system works only when the voltage is low, not when small positive noise is present.
+
+2:- Since we generally use NMOS and NPN transistors, which have default state of High, we use active Low to bring down the state to an ON condition, which is generally easier to bring it up to an on condition using an active high. 
+As seen in some microcontroller, we prefer the reset condition to be of the active low state,making it much more reliable and more resistant to your accidental resets due unwanted signal noise.
